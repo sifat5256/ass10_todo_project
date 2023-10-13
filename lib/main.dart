@@ -24,7 +24,7 @@ class ToDoApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+ // const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -122,9 +122,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.all(12.0),
                     child: Container(
                       height: 55,
-                      color: Colors.red ,
+                      //color: Colors.red ,
                       width: double.infinity,
                       child: ElevatedButton(
+
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.red
+
+                        ),
                         onPressed: () {
                           addTask();
                         },
@@ -208,7 +213,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     subtitle: Text(taskList[index].details),
                     title: Text(taskList[index].title),
                     leading: CircleAvatar(
-                      child: Text('${index + 1}'),
+
+                      child: Text('${index + 1}',style: TextStyle(color: Colors.white),),
                     ),
                     trailing: Icon(Icons.navigate_next),
                   );
