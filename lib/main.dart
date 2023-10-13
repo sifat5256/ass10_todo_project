@@ -76,6 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.tealAccent,
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: Colors.greenAccent,
         title: Text(
           'CRUD',
@@ -121,6 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.all(12.0),
                     child: Container(
                       height: 55,
+                      color: Colors.red ,
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
